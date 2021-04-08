@@ -1,0 +1,19 @@
+{% extends "index.html" %}
+
+{% block content %}
+    {% if list == 'ol' %}
+        <h2> Список профессий </h1>
+        {% for n, item in profs %}
+            <div> {{n + 1}}. {{item}}</div>
+    	{% endfor %}
+    {% elif list == 'ul' %}
+	<h2> Список профессий </h1>
+	{% for n, item in profs %}
+            <div> ● {{item}}</div>
+    	{% endfor %}
+
+    {% else %}
+        <h2> Выбран неверный формат вывода </h1>
+    {% endif %}
+    
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h2>Оформление каюты</h2>
+    <table>
+      <tr>
+        <td>Цвет стен</td>
+        <td>Эмблема</td>
+      </tr>
+      <tr>
+        <td><div style="width:107px;height:120px;background-color: hsl({{color}}, 50%, {{age}}%);"></div></td>
+        <td>{% if emblem %}<img src="/static/img/littlealien.png" alt="здесь должна была быть картинка, но не нашлась">
+            {% else %} <img src="/static/img/bigalien.png" alt="здесь должна была быть картинка, но не нашлась">
+            {% endif %}
+        </td>
+      </tr>
+    </table>
+{% endblock %}
